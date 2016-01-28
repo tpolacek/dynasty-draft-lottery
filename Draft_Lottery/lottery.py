@@ -22,30 +22,38 @@ class Lottery():
 
     #method to get each team's winning combos, and set odds
     def set_team_combos(self):
+        balls = range(1,101)
 
-        #define set of lotto combos for the team
-        self.standings[0].winning_combos = range(1,26)
-        #determine odds of winning for each team
+        # define set of lotto combos for the team
+        self.standings[0].winning_combos = random.sample(balls, 25)
+        # remove combos from available pool
+        balls = [x for x in balls if x not in self.standings[0].winning_combos]
+        # determine odds of winning for each team
         self.standings[0].odds_of_winning = \
             float(len(self.standings[0].winning_combos) / 100.0)
 
-        self.standings[1].winning_combos = range(26,48)
+        self.standings[1].winning_combos = random.sample(balls, 22)
+        balls = [x for x in balls if x not in self.standings[1].winning_combos]
         self.standings[1].odds_of_winning = \
             float(len(self.standings[1].winning_combos) / 100.0)
 
-        self.standings[2].winning_combos = range(48,68)
+        self.standings[2].winning_combos = random.sample(balls, 20)
+        balls = [x for x in balls if x not in self.standings[2].winning_combos]
         self.standings[2].odds_of_winning = \
             float(len(self.standings[2].winning_combos) / 100.0)
 
-        self.standings[3].winning_combos = range(68,83)
+        self.standings[3].winning_combos = random.sample(balls, 15)
+        balls = [x for x in balls if x not in self.standings[3].winning_combos]
         self.standings[3].odds_of_winning = \
             float(len(self.standings[3].winning_combos) / 100.0)
 
-        self.standings[4].winning_combos = range(83,93)
+        self.standings[4].winning_combos = random.sample(balls, 10)
+        balls = [x for x in balls if x not in self.standings[4].winning_combos]
         self.standings[4].odds_of_winning = \
             float(len(self.standings[4].winning_combos) / 100.0)
 
-        self.standings[5].winning_combos = range(93,101)
+        self.standings[5].winning_combos = random.sample(balls, 8)
+        balls = [x for x in balls if x not in self.standings[5].winning_combos]
         self.standings[5].odds_of_winning = \
             float(len(self.standings[5].winning_combos) / 100.0)
 
@@ -85,4 +93,3 @@ class Lottery():
         #warn user that window will close
         results += "\n\nProgram will close when you click OK\nPlease make sure to record lottery results"
         return results
-
