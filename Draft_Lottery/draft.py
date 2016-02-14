@@ -116,7 +116,16 @@ C6.pack(side = BOTTOM)
 
 #Run Lottery button and function call
 def run_the_lotto():
-    tkMessageBox.showinfo("Final Draft Lottery Results", lotto.run_lottery(standings))
+    results = lotto.run_lottery(standings)
+    tkMessageBox.showinfo("Final Draft Lottery Results", results)
+
+    # provide text output of each teams balls and the winning results
+    with open('results.txt', 'w') as f:
+        for t in teams:
+            f.write(t.show_draft_info())
+            f.write('\n')
+        f.write(results)
+
     #end program and close window when user clicks OK
     root.destroy()
 
