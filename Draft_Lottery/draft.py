@@ -6,7 +6,7 @@ import tkMessageBox
 #create teams for the lottery
 lob = team.Team("Legion of Boom", "Phil", 5, 10, 0, 1821)
 eg = team.Team("El Guapo", "Shelhamer", 7, 8, 0, 2015)
-boobs = team.Team("boobs", "Grobe", 7,8, 0, 1892)
+bbs = team.Team("bbs", "Grobe", 7,8, 0, 1892)
 geag = team.Team("Green Eggs & Graham", "Tim", 8, 7, 0, 2024)
 huw = team.Team("hide ur wife", "Jordan", 5, 10, 0, 1949)
 ml = team.Team("Monkey Largo", "Brogan", 4, 11, 0, 1650)
