@@ -40,7 +40,7 @@ class Team():
         elif self.wpct == team2.wpct:
             if self.prev_points > team2.prev_points:
                 return 1
-            elif self.prev_points > team2.prev_points:
+            elif self.prev_points < team2.prev_points:
                 return -1
         else:
             return 0
