@@ -1,0 +1,58 @@
+Legion of Boom draft information:
+Team owner:	Phil
+Previous record:	5-10-0
+Winning lottery combinations:
+[38, 75, 86, 90, 21, 46, 76, 70, 65, 83, 34, 16, 24, 33, 18, 69, 2, 29, 67, 89, 57, 48]
+Odds of winning draft lottery:
+22.0%
+
+bbs draft information:
+Team owner:	Grobe
+Previous record:	7-8-0
+Winning lottery combinations:
+[63, 9, 41, 81, 31, 32, 85, 28, 49, 53, 100, 51, 73, 20, 72]
+Odds of winning draft lottery:
+15.0%
+
+El Guapo draft information:
+Team owner:	Shelhamer
+Previous record:	7-8-0
+Winning lottery combinations:
+[8, 25, 79, 40, 68, 12, 92, 26, 95, 1]
+Odds of winning draft lottery:
+10.0%
+
+Green Eggs & Graham draft information:
+Team owner:	Tim
+Previous record:	8-7-0
+Winning lottery combinations:
+[99, 71, 82, 88, 19, 7, 98, 23]
+Odds of winning draft lottery:
+8.0%
+
+hide ur wife draft information:
+Team owner:	Jordan
+Previous record:	5-10-0
+Winning lottery combinations:
+[59, 55, 22, 52, 4, 14, 54, 11, 10, 91, 74, 5, 44, 6, 36, 80, 3, 87, 84, 93]
+Odds of winning draft lottery:
+20.0%
+
+Monkey Largo draft information:
+Team owner:	Brogan
+Previous record:	4-11-0
+Winning lottery combinations:
+[56, 13, 42, 62, 58, 27, 45, 97, 35, 78, 77, 61, 17, 60, 15, 96, 37, 43, 50, 39, 66, 47, 64, 94, 30]
+Odds of winning draft lottery:
+25.0%
+
+Pick #1: hide ur wife - Winning Combination: 93
+Pick #2: El Guapo - Winning Combination: 8
+Pick #3: bbs - Winning Combination: 85
+Pick #4: Monkey Largo - Winning Combination: 47
+Pick #5: Legion of Boom - Winning Combination: 83
+Pick #6: Green Eggs & Graham - Winning Combination: 88
+
+
+Program will close when you click OK
+Please make sure to record lottery results

@@ -4,15 +4,15 @@ from Tkinter import *
 import tkMessageBox
 
 #create teams for the lottery
-lob = team.Team("Legion of Boom", "Phil", 5, 10, 0, 1821)
-eg = team.Team("El Guapo", "Shelhamer", 7, 8, 0, 2015)
-bbs = team.Team("bbs", "Grobe", 7,8, 0, 1892)
-geag = team.Team("Green Eggs & Graham", "Tim", 8, 7, 0, 2024)
-huw = team.Team("hide ur wife", "Jordan", 5, 10, 0, 1949)
-ml = team.Team("Monkey Largo", "Brogan", 4, 11, 0, 1650)
+lob  = team.Team("Legion of Boom"   , "Phil"    , 4, 11, 0, 1709)
+ab   = team.Team("All Balls"        , "Brogan"  , 6, 9, 0, 1984)
+bbs  = team.Team("bbs"              , "Grobe"   , 4, 11, 0, 1603)
+tdp  = team.Team("Tha Dogg Pound"   , "Tunk"    , 6, 9, 0, 1838)
+huw  = team.Team("hide ur wife"     , "Jordan"  , 7, 8, 0, 1887)
+sad  = team.Team("Switch All Day"   , "Andi"    , 5, 10, 0, 1867)
 
 #place teams in a list
-teams = [lob, boobs, eg, geag, huw, ml]
+teams = [lob, bbs, ab, tdp, huw, sad]
 
 #load the lottery object
 lotto = lottery.Lottery(teams)
