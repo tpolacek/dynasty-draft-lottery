@@ -25,6 +25,7 @@ class Lottery():
         balls = range(1,101)
 
         # define set of lotto combos for the team
+        # this is random sample without replacement, so no repeat numbers
         self.standings[0].winning_combos = random.sample(balls, 25)
         # remove combos from available pool
         balls = [x for x in balls if x not in self.standings[0].winning_combos]

@@ -4,15 +4,15 @@ from Tkinter import *
 import tkMessageBox
 
 #create teams for the lottery
-lob  = team.Team("Legion of Boom"   , "Phil"        ,  3, 12, 0, 1779)
-ab   = team.Team("All Balls"        , "Brogan"      ,  6, 9, 0, 1827)
-bbs  = team.Team("boobs"            , "Grobe"       ,  3, 12, 0, 1654)
-elg  = team.Team("El Guapo"         , "Shelhamer"   ,  8, 7, 0, 1708)
-huw  = team.Team("hide ur wife"     , "Jordan"      ,  3, 12, 0, 1683)
-sad  = team.Team("Switch All Day"   , "Andi"        ,  9, 6, 0, 1866)
+low  = team.Team("Legion of Whom"       , "Phil",      6, 9,    0, 1866)
+jmf  = team.Team("Junior MAFIA"         , "Dave",      7, 8,    0, 2171)
+bbs  = team.Team("boobs"                , "Grobe",     8, 7,    0, 2143)
+elg  = team.Team("El Guapo"             , "Shelhamer", 5, 10,   0, 1579)
+huw  = team.Team("hide ur wife"         , "Jordan",    4, 11,   0, 1658)
+sad  = team.Team("El Guapo (via Andi)"  , "Andi",      6, 9,    0, 1889)
 
 #place teams in a list
-teams = [lob, bbs, ab, elg, huw, sad]
+teams = [low, bbs, jmf, elg, huw, sad]
 
 #load the lottery object
 lotto = lottery.Lottery(teams)
@@ -100,7 +100,7 @@ B5 = Button(rightFrame, text = teams[4].name, command = show_team5)
 
 C5 = Canvas(rightFrame, height = 250, width = 300)
 filename5 = PhotoImage(file = "fire.gif")
-image5 = C5.create_image(150, 150, anchor = CENTER, image = filename5)
+image5 = C5.create_image(150, 150, anchor = CENTER, image = filename5) 
 C5.pack(side = TOP)
 
 #Team 6
@@ -110,8 +110,8 @@ def show_team6():
 B6 = Button(rightFrame, text = teams[5].name, command = show_team6)
 
 C6 = Canvas(rightFrame, height = 250, width = 300)
-filename6 = PhotoImage(file = "hawks.gif")
-image6 = C6.create_image(150, 150, anchor = CENTER, image = filename6)
+filename6 = PhotoImage(file = "hawks.gif") 
+image6 = C6.create_image(150, 150, anchor = CENTER, image = filename4) # Here is the change to make 2 pictures the same
 C6.pack(side = BOTTOM)
 
 #Run Lottery button and function call
