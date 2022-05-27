@@ -32,18 +32,18 @@ class Team():
         return float(wpct)
 
     #comparator function for team wpct
-    def __cmp__(self, team2):
-        if self.wpct > team2.wpct:
-            return 1
-        elif self.wpct < team2.wpct:
-            return -1
-        elif self.wpct == team2.wpct:
-            if self.prev_points > team2.prev_points:
-                return 1
-            elif self.prev_points < team2.prev_points:
-                return -1
-        else:
-            return 0
+    #def __cmp__(self, team2):
+    #    if self.wpct > team2.wpct:
+    #        return 1
+    #    elif self.wpct < team2.wpct:
+    #        return -1
+    #    elif self.wpct == team2.wpct:
+    #        if self.prev_points > team2.prev_points:
+    #            return 1
+    #        elif self.prev_points < team2.prev_points:
+    #            return -1
+    #    else:
+    #        return 0
 
     #return a string with all pertinent draft information for the team
     def show_draft_info(self):
@@ -55,4 +55,35 @@ class Team():
                 "Odds of winning draft lottery:\n" + str((self.odds_of_winning)*100) + "%\n"
 
         return info
+
+    # new set of comparator functions that work in python3
+    def __eq__(self, team2):
+        return (self.wpct == team2.wpct)
+
+    def __ne__(self, team2):
+        return not (self.wpct == team2.wpct)
+
+    def __lt__(self, team2):
+        if self.wpct == team2.wpct:
+            return (self.prev_points < team2.prev_points)
+        else:
+            return (self.wpct < team2.wpct)
+        
+    def __le__(self, team2):
+        if self.wpct == team2.wpct:
+            return (self.prev_points <= team2.prev_points)
+        else:
+            return (self.wpct <= team2.wpct)
+
+    def __gt__(self, team2):
+        if self.wpct == team2.wpct:
+            return (self.prev_points > team2.prev_points)
+        else:
+            return (self.wpct > team2.wpct)
+
+    def __ge__(self, team2):
+        if self.wpct == team2.wpct:
+            return (self.prev_points >= team2.prev_points)
+        else:
+            return (self.wpct >= team2.wpct)
 
