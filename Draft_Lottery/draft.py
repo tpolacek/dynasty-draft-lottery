@@ -1,18 +1,21 @@
 import team             #necessary imports
 import lottery
-from Tkinter import *
-import tkMessageBox
+# from Tkinter import *
+# import tkMessageBox
+# for python3 if I ever do update this
+from tkinter import *
+import tkinter.messagebox
 
 #create teams for the lottery
-low  = team.Team("Legion of Whom"       , "Phil",      6, 9,    0, 1866)
-jmf  = team.Team("Junior MAFIA"         , "Dave",      7, 8,    0, 2171)
-bbs  = team.Team("boobs"                , "Grobe",     8, 7,    0, 2143)
-elg  = team.Team("El Guapo"             , "Shelhamer", 5, 10,   0, 1579)
-huw  = team.Team("hide ur wife"         , "Jordan",    4, 11,   0, 1658)
-sad  = team.Team("El Guapo (via Andi)"  , "Andi",      6, 9,    0, 1889)
+mmc  = team.Team("Mr. McCaFreeze"   , "Tunk",       4, 11,   0, 1821)
+sad  = team.Team("Switch All Day"   , "Andi",       6, 9,    0, 1653)
+alb  = team.Team("ALL BALLS"        , "Brogan",     7, 8,    0, 1665)
+elg  = team.Team("El Guapo"         , "Shelhamer",  6, 9,    0, 1706)
+tmt  = team.Team("T-Mart"           , "Martin",     8, 7,    0, 1892)
+huw  = team.Team("hide ur wife"     , "Jordan",     7, 8,    0, 1788)
 
 #place teams in a list
-teams = [low, bbs, jmf, elg, huw, sad]
+teams = [mmc, sad, alb, elg, tmt, huw]
 
 #load the lottery object
 lotto = lottery.Lottery(teams)
@@ -48,7 +51,7 @@ bottomFrame.pack(side = BOTTOM)
 #Team 1
 #show draft information function call for button
 def show_team1():
-    tkMessageBox.showinfo(teams[0].name + " Draft Information", teams[0].show_draft_info())
+    tkinter.messagebox.showinfo(teams[0].name + " Draft Information", teams[0].show_draft_info())
 
 #create button for team 1
 B1 = Button(topFrame, text = teams[0].name, command = show_team1)
@@ -61,7 +64,7 @@ C1.pack(side = TOP)
 
 #Team 2
 def show_team2():
-    tkMessageBox.showinfo(teams[1].name + " Draft Information", teams[1].show_draft_info())
+    tkinter.messagebox.showinfo(teams[1].name + " Draft Information", teams[1].show_draft_info())
 
 B2 = Button(topFrame, text = teams[1].name, command = show_team2)
 
@@ -72,7 +75,7 @@ C2.pack(side = BOTTOM)
 
 #Team 3
 def show_team3():
-    tkMessageBox.showinfo(teams[2].name + " Draft Information", teams[2].show_draft_info())
+    tkinter.messagebox.showinfo(teams[2].name + " Draft Information", teams[2].show_draft_info())
 
 B3 = Button(leftFrame, text = teams[2].name, command = show_team3)
 
@@ -83,7 +86,7 @@ C3.pack(side = TOP)
 
 #Team 4
 def show_team4():
-    tkMessageBox.showinfo(teams[3].name + " Draft Information", teams[3].show_draft_info())
+    tkinter.messagebox.showinfo(teams[3].name + " Draft Information", teams[3].show_draft_info())
 
 B4 = Button(leftFrame, text = teams[3].name, command = show_team4)
 
@@ -94,7 +97,7 @@ C4.pack(side = BOTTOM)
 
 #Team 5
 def show_team5():
-    tkMessageBox.showinfo(teams[4].name + " Draft Information", teams[4].show_draft_info())
+    tkinter.messagebox.showinfo(teams[4].name + " Draft Information", teams[4].show_draft_info())
 
 B5 = Button(rightFrame, text = teams[4].name, command = show_team5)
 
@@ -105,7 +108,7 @@ C5.pack(side = TOP)
 
 #Team 6
 def show_team6():
-    tkMessageBox.showinfo(teams[5].name + " Draft Information", teams[5].show_draft_info())
+    tkinter.messagebox.showinfo(teams[5].name + " Draft Information", teams[5].show_draft_info())
 
 B6 = Button(rightFrame, text = teams[5].name, command = show_team6)
 
@@ -117,7 +120,7 @@ C6.pack(side = BOTTOM)
 #Run Lottery button and function call
 def run_the_lotto():
     results = lotto.run_lottery(standings)
-    tkMessageBox.showinfo("Final Draft Lottery Results", results)
+    tkinter.messagebox.showinfo("Final Draft Lottery Results", results)
 
     # provide text output of each teams balls and the winning results
     with open('results.txt', 'w') as f:
