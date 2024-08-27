@@ -1,21 +1,19 @@
 import team             #necessary imports
 import lottery
-# from Tkinter import *
-# import tkMessageBox
-# for python3 if I ever do update this
-from tkinter import *
-import tkinter.messagebox
+
+import tkinter as tk
+from tkinter import messagebox
 
 #create teams for the lottery
-mmc  = team.Team("Mr. McCaFreeze"   , "Tunk",       4, 11,   0, 1821)
-sad  = team.Team("Switch All Day"   , "Andi",       6, 9,    0, 1653)
-alb  = team.Team("ALL BALLS"        , "Brogan",     7, 8,    0, 1665)
-elg  = team.Team("El Guapo"         , "Shelhamer",  6, 9,    0, 1706)
-tmt  = team.Team("T-Mart"           , "Martin",     8, 7,    0, 1892)
-huw  = team.Team("hide ur wife"     , "Jordan",     7, 8,    0, 1788)
+fft  = team.Team("boobs"                    , "Grobe"   , 9, 6,     0, 1953)
+sad  = team.Team("T-Mart"                   , "Martin"  , 6, 9,     0, 1676)
+alb  = team.Team("ALL BALLS"                , "Brogan"  , 3, 12,    0, 1679)
+elg  = team.Team("Aiyuken"                  , "Tunk"    , 8, 7,     0, 2126)
+tmt  = team.Team("Switch All Day"           , "Andi"    , 3, 12,    0, 1603)
+huw  = team.Team("Fantasy Football Team"    , "Phil"    , 7, 8,     0, 1840)
 
 #place teams in a list
-teams = [mmc, sad, alb, elg, tmt, huw]
+teams = [fft, sad, alb, elg, tmt, huw]
 
 #load the lottery object
 lotto = lottery.Lottery(teams)
@@ -27,100 +25,97 @@ standings = lotto.make_standings()
 lotto.set_team_combos()
 
 #create a main GUI window
-root = Tk()
+root = tk.Tk()
 root.wm_title("Dynasty Draft Lottery")
 
 #create frames to hold interactive elements
-rightFrame = Frame(root)
-rightFrame.pack(side = RIGHT)
+rightFrame = tk.Frame()
+rightFrame.pack(side = tk.RIGHT)
 
-leftFrame = Frame(root)
-leftFrame.pack(side = LEFT)
+leftFrame = tk.Frame()
+leftFrame.pack(side = tk.LEFT)
 
-topFrame = Frame(root)
-topFrame.pack(side = TOP)
+topFrame = tk.Frame()
+topFrame.pack(side = tk.TOP)
 
-bottomFrame = Frame(root)
-bottomFrame.pack(side = BOTTOM)
-
-
-
+bottomFrame = tk.Frame()
+bottomFrame.pack(side = tk.BOTTOM)
 
 #assign buttons, images, and what to display for each button when pressed
 
 #Team 1
 #show draft information function call for button
 def show_team1():
-    tkinter.messagebox.showinfo(teams[0].name + " Draft Information", teams[0].show_draft_info())
+    messagebox.showinfo(teams[0].name + " Draft Information", teams[0].show_draft_info())
 
 #create button for team 1
-B1 = Button(topFrame, text = teams[0].name, command = show_team1)
+B1 = tk.Button(topFrame, text = teams[0].name, command = show_team1)
 
 #place image for team 1
-C1 = Canvas(topFrame, height = 250, width = 300)
-filename1 = PhotoImage(file = "bulls.gif")
-image1 = C1.create_image(150, 150 , anchor = CENTER, image = filename1)
-C1.pack(side = TOP)
+C1 = tk.Canvas(topFrame, height = 250, width = 300)
+filename1 = tk.PhotoImage(file = "bulls.gif")
+image1 = C1.create_image(150, 150 , anchor = tk.CENTER, image = filename1)
+C1.pack(side = tk.TOP)
 
 #Team 2
 def show_team2():
-    tkinter.messagebox.showinfo(teams[1].name + " Draft Information", teams[1].show_draft_info())
+    messagebox.showinfo(teams[1].name + " Draft Information", teams[1].show_draft_info())
 
-B2 = Button(topFrame, text = teams[1].name, command = show_team2)
+B2 = tk.Button(topFrame, text = teams[1].name, command = show_team2)
 
-C2 = Canvas(topFrame, height = 250, width = 300)
-filename2 = PhotoImage(file = "bears.gif")
-image2 = C2.create_image(150, 150, anchor = CENTER, image = filename2)
-C2.pack(side = BOTTOM)
+C2 = tk.Canvas(topFrame, height = 250, width = 300)
+filename2 = tk.PhotoImage(file = "bears.gif")
+image2 = C2.create_image(150, 150, anchor = tk.CENTER, image = filename2)
+C2.pack(side = tk.BOTTOM)
 
 #Team 3
 def show_team3():
-    tkinter.messagebox.showinfo(teams[2].name + " Draft Information", teams[2].show_draft_info())
+    messagebox.showinfo(teams[2].name + " Draft Information", teams[2].show_draft_info())
 
-B3 = Button(leftFrame, text = teams[2].name, command = show_team3)
+B3 = tk.Button(leftFrame, text = teams[2].name, command = show_team3)
 
-C3 = Canvas(leftFrame, height = 250, width = 300)
-filename3 = PhotoImage(file = "sox.gif")
-image3 = C3.create_image(150, 150 , anchor = CENTER, image = filename3)
-C3.pack(side = TOP)
+C3 = tk.Canvas(leftFrame, height = 250, width = 300)
+filename3 = tk.PhotoImage(file = "sox.gif")
+image3 = C3.create_image(150, 150 , anchor = tk.CENTER, image = filename3)
+C3.pack(side = tk.TOP)
 
 #Team 4
 def show_team4():
-    tkinter.messagebox.showinfo(teams[3].name + " Draft Information", teams[3].show_draft_info())
+    messagebox.showinfo(teams[3].name + " Draft Information", teams[3].show_draft_info())
 
-B4 = Button(leftFrame, text = teams[3].name, command = show_team4)
+B4 = tk.Button(leftFrame, text = teams[3].name, command = show_team4)
 
-C4 = Canvas(leftFrame, height = 250, width = 300)
-filename4 = PhotoImage(file = "cubs.gif")
-image4 = C4.create_image(150, 150 , anchor = CENTER, image = filename4)
-C4.pack(side = BOTTOM)
+C4 = tk.Canvas(leftFrame, height = 250, width = 300)
+filename4 = tk.PhotoImage(file = "cubs.gif")
+image4 = C4.create_image(150, 150 , anchor = tk.CENTER, image = filename4)
+C4.pack(side = tk.BOTTOM)
 
 #Team 5
 def show_team5():
-    tkinter.messagebox.showinfo(teams[4].name + " Draft Information", teams[4].show_draft_info())
+    messagebox.showinfo(teams[4].name + " Draft Information", teams[4].show_draft_info())
 
-B5 = Button(rightFrame, text = teams[4].name, command = show_team5)
+B5 = tk.Button(rightFrame, text = teams[4].name, command = show_team5)
 
-C5 = Canvas(rightFrame, height = 250, width = 300)
-filename5 = PhotoImage(file = "fire.gif")
-image5 = C5.create_image(150, 150, anchor = CENTER, image = filename5) 
-C5.pack(side = TOP)
+C5 = tk.Canvas(rightFrame, height = 250, width = 300)
+filename5 = tk.PhotoImage(file = "fire.gif")
+image5 = C5.create_image(150, 150, anchor = tk.CENTER, image = filename5) 
+C5.pack(side = tk.TOP)
 
 #Team 6
 def show_team6():
-    tkinter.messagebox.showinfo(teams[5].name + " Draft Information", teams[5].show_draft_info())
+    messagebox.showinfo(teams[5].name + " Draft Information", teams[5].show_draft_info())
 
-B6 = Button(rightFrame, text = teams[5].name, command = show_team6)
+B6 = tk.Button(rightFrame, text = teams[5].name, command = show_team6)
 
-C6 = Canvas(rightFrame, height = 250, width = 300)
-filename6 = PhotoImage(file = "hawks.gif") 
-image6 = C6.create_image(150, 150, anchor = CENTER, image = filename4) # Here is the change to make 2 pictures the same
-C6.pack(side = BOTTOM)
+C6 = tk.Canvas(rightFrame, height = 250, width = 300)
+filename6 = tk.PhotoImage(file = "hawks.gif") 
+image6 = C6.create_image(150, 150, anchor = tk.CENTER, image = filename6) # Here is the change to make 2 pictures the same
+C6.pack(side = tk.BOTTOM)
 
 #Run Lottery button and function call
 def run_the_lotto():
     results = lotto.run_lottery(standings)
-    tkinter.messagebox.showinfo("Final Draft Lottery Results", results)
+    messagebox.showinfo("Final Draft Lottery Results", results)
 
     # provide text output of each teams balls and the winning results
     with open('results.txt', 'w') as f:
@@ -132,15 +127,15 @@ def run_the_lotto():
     #end program and close window when user clicks OK
     root.destroy()
 
-LottoButton = Button(bottomFrame, text = "Run Lottery", command = run_the_lotto)
+LottoButton = tk.Button(bottomFrame, text = "Run Lottery", command = run_the_lotto)
 
 #pack and run window
-B1.pack(side = TOP)
-B2.pack(side = BOTTOM)
-B3.pack(side = TOP)
-B4.pack(side = BOTTOM)
-B5.pack(side = TOP)
-B6.pack(side = BOTTOM)
-LottoButton.pack(side = BOTTOM)
+B1.pack(side = tk.TOP)
+B2.pack(side = tk.BOTTOM)
+B3.pack(side = tk.TOP)
+B4.pack(side = tk.BOTTOM)
+B5.pack(side = tk.TOP)
+B6.pack(side = tk.BOTTOM)
+LottoButton.pack(side = tk.BOTTOM)
 
 root.mainloop()
